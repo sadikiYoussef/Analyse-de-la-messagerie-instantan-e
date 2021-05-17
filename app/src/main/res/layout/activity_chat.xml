@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".ChatActivity">
+
+    <include
+        android:id="@+id/chat_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+    <LinearLayout
+        android:id="@+id/aa"
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/speak"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mic" />
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:hint=" text"
+            android:textSize="20dp">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_messages_list_of_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aa"
+        android:layout_above="@+id/chat_linear_layout"
+        android:layout_marginBottom="6dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        >
+
+
+        <ImageButton
+            android:id="@+id/send_files_btn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:src="@drawable/send_files"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@android:color/white"
+            />
+
+
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tapez le message ici..."
+            android:textColorHint="#574A4A"
+            android:padding="15dp"
+            android:maxLines="5"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/send_files_btn"
+            android:layout_toStartOf="@+id/send_message_btn"
+            />
+
+
+        <ImageButton
+            android:id="@+id/send_message_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send_message"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@android:color/white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

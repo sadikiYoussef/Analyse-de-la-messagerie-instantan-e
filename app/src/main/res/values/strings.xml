@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Analyse Chats</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+</resources>
